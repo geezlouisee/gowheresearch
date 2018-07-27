@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <!-- Firestore script-->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCgMLvblveRa3vZsUTCkVxqYU8rw2IFzF4",
+      authDomain: "realorbital-386b5.firebaseapp.com",
+      databaseURL: "https://realorbital-386b5.firebaseio.com",
+      projectId: "realorbital-386b5",
+      storageBucket: "realorbital-386b5.appspot.com",
+      messagingSenderId: "207931046306"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- Firebase authentication setup. -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+  <script src="https://www.gstatic.com/firebasejs/ui/3.0.0/firebase-ui-auth__en.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.0.0/firebase-ui-auth.css" />
+  <script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          if (isNewUser) {
+            window.location = "index.html";
+          }
+          console.log(isNewUser);
+          return !isNewUser;
+        },
+        uiShown: function () {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById('loader').style.display = 'none';
+        }
+      },
+
+      signInFlow: 'popup',
+      SignInSuccessUrl: 'index.html',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+      // Terms of service url.
+      tosUrl: '<your-tos-url>'
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  </head>
+  <body>
+      <div id="firebaseui-auth-container"></div>
+      <div id="loader">Loading...</div>
+  </body>

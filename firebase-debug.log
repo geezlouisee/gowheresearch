@@ -1,0 +1,41 @@
+[debug] [2018-07-27T15:22:44.015Z] ----------------------------------------------------------------------
+[debug] [2018-07-27T15:22:44.018Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lixua\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-27T15:22:44.019Z] CLI Version:   4.0.0
+[debug] [2018-07-27T15:22:44.019Z] Platform:      win32
+[debug] [2018-07-27T15:22:44.019Z] Node Version:  v10.5.0
+[debug] [2018-07-27T15:22:44.020Z] Time:          Fri Jul 27 2018 23:22:44 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:44.020Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-27T15:22:44.033Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-27T15:22:44.034Z] > authorizing via signed-in user
+[debug] [2018-07-27T15:22:44.036Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/realorbital-386b5  
+  
+ Fri Jul 27 2018 23:22:44 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:44.976Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-27T15:22:44.982Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/realorbital-386b5/tokens  
+  
+ Fri Jul 27 2018 23:22:44 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:45.827Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-27T15:22:45.829Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/realorbital-386b5  
+  
+ Fri Jul 27 2018 23:22:45 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:47.056Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\lixua'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-07-27T15:22:48.382Z] Fetching environment
+[debug] [2018-07-27T15:22:48.387Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/207931046306:getServerAppConfig  
+  
+ Fri Jul 27 2018 23:22:48 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:48.388Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/207931046306/clients/_:getWebAppConfig  
+  
+ Fri Jul 27 2018 23:22:48 GMT+0800 (Singapore Standard Time)
+[debug] [2018-07-27T15:22:49.365Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-27T15:22:49.366Z] Starting @google-cloud/functions-emulator
+[debug] [2018-07-27T15:22:49.820Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-07-27T15:22:51.453Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
